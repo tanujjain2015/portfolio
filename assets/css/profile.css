@@ -1,0 +1,167 @@
+/*
+Author: Tanuj Jain
+Version: 1.0
+Dated: Mar-17-2020
+Last Modified: Mar-17-2020
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  width: 100vw;
+  height: 100vw;
+
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 15%;
+}
+
+header h1 {
+  color: black;
+  font-size: large;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 70px;
+  text-align: center;
+  border-style: solid;
+  border-color: orangered;
+  border-width: 3px;
+  width: 85%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  /*float: left;*/
+}
+
+header img {
+  width: 15%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+
+/*.left-navigation {
+  width: 20%;
+  height: 90%;
+  background-color: coral;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-style: solid;
+  border-width: 2px;
+  background-color: burlywood;
+  color: black;
+}
+
+
+.left-common h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.left-common p {
+  text-align: center;
+  font-size: 16px;
+  color: black;
+}
+*/
+  
+
+.main-container {
+  width: 100%;
+  height: 90%;
+  /*float: right;*/
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat (8, 11fr);
+  /*background-color: palegreen;*/
+  border: black;
+  border-style: solid;
+  border-width: 2px;
+  grid-gap: 10px;
+}
+
+
+.grid-list-item {
+  grid-column: 1  ;
+  border: coral;
+  border-style: solid;
+}
+
+.list {
+  padding-left: 30px;
+  padding-right: 10px
+}
+
+.sublist {
+  padding-left: 20px;
+}
+
+.grid-list-item h2 {
+  padding-bottom: 10px;
+}
+
+.grid-list-item h3 {
+
+  padding-bottom: 10px;
+}
+
+.grid-list-item h4 {
+  padding-bottom: 10px;
+}
+
+
+
+
+/*
+header 
+h1 {
+  padding: 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #eee;
+  text-align: center;
+  background: #333;
+}
+h2 {
+  font-size: 24px;
+}
+a {
+  color: #d21034;
+}
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+#main-bio,
+#contact-info,
+#bio-image {
+  float: left;
+}
+#main-bio {
+  width: 70%;
+}
+#contact-info {
+  width: 30%;
+}
+#bio-image {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+*/
