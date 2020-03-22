@@ -2,38 +2,392 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
 header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
     background-color: black;
-    text-align: center;
-    padding: 20px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%
 }
-header h1{
-    
+
+body {
+    background-color: #ececec;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #003262 ;
+    width: 100vw;
+    height: 100vw;
+}
+
+header h1 {
     font-size: 36px;
-    color: white;
+    font-weight: bold;
+    color: turquoise;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
     display: inline;
+    align-content: center;
 }
 
-.container {
-    margin: 0 auto;
-    width: 1000px;
-}
+header a {
+    text-decoration: none;
+    color: turquoise;
 
-#main-bio {
-    float: left;
+  }
+
+header nav {
+    /*float: right;*/
+    margin: 7px 0;
     width: 50%;
 }
 
-#main-bio img {
-    float: left;
+header nav ul {
+    /*display: inline;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-#main-bio p {
-    float: right;
+
+header nav ul li{
+    list-style-type: none;
+}
+
+/*
+header nav ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}*/
+
+header nav ul li a {
+    /*margin: 0 30px;*/
+    padding: 10x 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-decoration: underline;
+}
+
+header nav ul li a:hover {
+  background: black;
+  color: #024e76;
+  border-radius: 15px;
+  font-size: 2vw;
+  text-shadow: none;
+}
+
+
+.banner {
+    width: 100%;
+    height: 15%;
+    background-image: url("https://eecs.oregonstate.edu/sites/eecs.oregonstate.edu/files/images/cybersecurity-1200x450.jpg");
+}
+
+.banner h2 {
+    color: white;
+    justify-content: last baseline;
+    text-align: right;
+    margin: 0;
+    padding: 9%;
+    font-size: 60px;
+}
+
+
+.aboutmeblock {
+    width: 100%;
+    height: 7.5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutme-header {
+    height: 100%;
+    width: 20%;
+    border-right-style: solid;
+    border-right-color: #003262 ;
+    border-right-width: 5px;
+    text-align: right;
+}
+
+.aboutme-header h2{
+    padding-right: 10px;
+    font-size: 36px;
+}
+
+.aboutme-info {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    width: 80%;
+    align-content: center;
+}
+
+.expertiseblock {
+    width: 100%;
+    height: 7.5%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.expertise-header {
+    height: 100%;
+    width: 20%;
+    border-right-style: solid;
+    border-right-color: #003262 ;
+    border-right-width: 5px;
+    text-align: right;
+    word-break: break-all;
+}
+
+.expertise-header h2{
+    padding-right: 10px;
+    font-size: 36px;
+}
+
+.expertise-info {
+    padding-left: 10px ;
+    height: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(auto,1fr));
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+}   
+
+.initiativeblock {
+    width: 100%;
+    height: 7.5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.initiative-header {
+    height: 100%;
+    width: 20%;
+    border-right-style: solid;
+    border-right-color: #003262 ;
+    border-right-width: 5px;
+    text-align: right;
+    word-break: break-all;
+}
+
+.initiative-header {
+    height: 100%;
+    width: 20%;
+    border-right-style: solid;
+    border-right-color: #003262 ;
+    border-right-width: 5px;
+    text-align: right;
+    word-break: break-all;
+}
+
+.initiative-header h2{
+    padding-right: 10px;
+    font-size: 36px;
+}
+
+.initiative-info {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    width: 80%;
+    align-content: center;
+}   
+
+.workblock {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    border-width: 2px;
     
 }
-.contact-info {
-    float: right;
-    width: 30%;
+
+.work-header {
+    height: 100%;
+    width: 20%;
+    border-right-style: solid;
+    border-right-color: #003262 ;
+    border-right-width: 5px;
+    text-align: right;
+}
+
+.work-header h2 {
+    padding-right: 10px;
+    font-size: 36px;
+}
+
+.gridcontainer {
+    height: 100%;
+    width: 80%;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr) ;
+    grid-template-rows: repeat(6,2fr);
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+}
+
+
+.box1 {
+    grid-column: 1/ span 4;
+    grid-row: 1/span 3;
+    border-style: 0.5px;
+    border-color: #003262 ;
+    border-style: double;
+    box-align: center;
+    /*display: inline;
+    position: relative;*/
+    background-image: url(../images/RunBuddy.png);
+    background-size: cover;
+}
+
+/*
+#RunBuddy {
+    background-image: url(../images/RunBuddy.png);
+    background-size: cover;
+    display: block;
+    text-indent:-9999px;
+    width: 100%;
+    height: 100%;
+}*/
+
+.box1 h3{
+    text-align: left;
+    font-size: 30px;
+    margin-top: 30%;
+    width: 200px;
+    height:50px;
+    background-color: #ececec;
+}
+.box1 h4{
+    text-align: left;
+    width: 200px;
+    background-color: #ececec;
+}
+
+
+
+
+.box2 {
+    grid-column: 5/ span 2;
+    grid-row: 1/span 2;
+    border-style: 0.5px;
+    border-color: #003262 ;
+    border-style: double;
+    background-image: url("https://thumbs.dreamstime.com/t/led-video-wall-screen-texture-background-vector-blue-red-purple-color-light-diode-dot-grid-142380414.jpg");
+    background-size: cover;
+}
+
+.box2 h3 {
+    text-align: left;
+    font-size: 30px;
+    margin-top: 40%;
+    width: 200px;
+    height:50px;
+    background-color: #ececec;
+}
+
+.box2 h4 {
+    text-align: left;
+    width: 200px;
+    background-color: #ececec;
+}
+
+
+.box3 {
+    grid-column: 1/ span 2;
+    grid-row: 4/span 3;
+    border-style: 0.5px;
+    border-color:#003262 ;
+    border-style: double;
+    background-image: url("https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/65013649/original/d66427804aff912a3240edebf6cdc2a8215783ce/put-your-logo-or-website-on-10-laptop-screen-mockup.jpg");
+    background-size: cover;
+    
+}
+
+.box3 h3 {
+    text-align: left;
+    font-size: 30px;
+    margin-top: 60%;
+    width: 200px;
+    height:50px;
+    background-color: #ececec;
+    align-content: center;
+}
+
+.box3 h4 {
+    text-align: left;
+    width: 200px;
+    background-color: #ececec;
+}
+
+
+
+.box4 {
+    grid-column: 3/ span 2;
+    grid-row: 4/span 3;
+    border-style: 0.5px;
+    border-color: #003262 ;
+    border-style: double;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR8NJ9fAS2CSdaZ2rSry-L0EGhETaFpRUCIQPgtueFnmEY5V2Co");
+    background-size: cover;
+}
+
+.box4 h3 {
+    text-align: left;
+    font-size: 30px;
+    margin-top: 60%;
+    width: 200px;
+    height:50px;
+    background-color: #ececec;
+    align-content: center;
+}
+
+.box4 h4 {
+    text-align: left;
+    width: 200px;
+    background-color: #ececec;
+}
+
+
+.contactblock {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactme-header {
+    width: 20%;
+    height: 100%;
+    border-right-style: solid;
+    border-right-color: #003262 ;
+    border-right-width: 5px;
+    text-align: right;
+}
+
+.contactme-header h2 {
+    padding-right: 10px;
+    font-size: 36px;
+}
+
+.contactinfo {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-content: center;
 }
