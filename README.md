@@ -3,7 +3,7 @@
 
 Author: Tanuj Jain
 Dated: Mar-22-2020
-Version: 1.1
+Version: 1.2
 
 Description:
 
@@ -14,7 +14,7 @@ https://tanujjain2015.github.io/portfolio/
 
 Change Log:
 
-V1.1: 
+V1.2: 
 This version provides base Index.html and Profile.html file for further . Here are list of high level changes performed:  
 
 Features: 
@@ -35,3 +35,4 @@ Known Issues:
 3.  Navigation header underline need to have some space. 
 4.  Overflow of grid layout in work section not functioning as expected. Fix in Progress. 
 5.  Need to provide animation. 
+6.  Sticky header is not working on Index.html when pushed to portfolio. 
