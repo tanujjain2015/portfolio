@@ -7,6 +7,11 @@ Last Modified: Mar-17-2020
 
 :root {
   --light-brown: #b5651d;
+  --header-color: black;
+  --header-text-color: turquoise;
+  --blue-text: #003262;
+  --grid-border: black;
+  --background-color: #ececec;
 }
 
 * {
@@ -20,7 +25,8 @@ body {
   font-size: 18px;
   width: 100vw;
   height: 100vw;
-  color: #003262 ;
+  color: var(--blue-text) ;
+  background-color: var(--background-color);
 }
 
 h2 {
@@ -28,31 +34,26 @@ h2 {
   padding-bottom: 10px;
 }
 
-/*header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  height: 10%;
-  background-color: #ececec;
-}*/
 
 header {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 35px;
   padding-right: 35px;
-  background-color: black;
+  background-color: var(--header-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width:100%
+  width:100%;
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
 }
 
 header h1 {
   font-size: 36px;
   font-weight: bold;
-  color: turquoise;
+  color: var(--header-text-color);
   margin: 0;
   text-decoration: none;
   text-align: center;
@@ -61,34 +62,9 @@ header h1 {
 }
 
 
-/*
-header h1 {
-  color:#003262;
-  font-size: large;
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 70px;
-  text-align: center;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: black;
-  width: 85%;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  /*float: left;*/
-/*}*/
-
-/*
-header img {
-  width: 15%;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: black;
-}*/
-
 header a {
   text-decoration: none;
-  color: turquoise;
+  color: var(--header-text-color);
 
 }
 
@@ -127,8 +103,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-background: black;
-color: #024e76;
+background: var(--header-color);
+color: var(--blue-text);
 border-radius: 15px;
 font-size: 2vw;
 text-shadow: none;
@@ -146,7 +122,7 @@ text-shadow: none;
   grid-template-columns: repeat (6, 2fr);
   grid-template-rows: repeat (6, 2fr);
   /*background-color: palegreen;*/
-  border: black;
+  border: var(--grid-border);
   border-style: solid;
   border-width: 2px;
   grid-gap: 10px;
@@ -165,7 +141,7 @@ text-shadow: none;
   grid-gap: 10px;
   border-right-style: solid;
   border-right-width: 3px;
-  border-right-color: black;
+  border-right-color: var(--blue-text);
 
 }
 

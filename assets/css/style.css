@@ -1,3 +1,17 @@
+/* Author: Tanuj Jain 
+   Last Modified: Mar 22 2020
+   Purpose: This file is a main style sheet for Portfolio Page*/
+
+:root {
+    --light-brown: #b5651d;
+    --header-color: black;
+    --header-text-color: turquoise;
+    --blue-text: #003262;
+    --grid-border: black;
+    --background-color: #ececec;
+    --banner-text: white;
+  }
+  
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +23,20 @@ header {
     padding-bottom: 20px;
     padding-left: 35px;
     padding-right: 35px;
-    background-color: black;
+    background-color:var(--header-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width:100%
+    width:100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
 }
 
 body {
-    background-color: #ececec;
+    background-color: var(--background-color);
     font-family: Arial, Helvetica, sans-serif;
-    color: #003262 ;
+    color: var(--blue-text) ;
     width: 100vw;
     height: 100vw;
 }
@@ -27,7 +44,7 @@ body {
 header h1 {
     font-size: 36px;
     font-weight: bold;
-    color: turquoise;
+    color: var(--header-text-color);
     margin: 0;
     text-decoration: none;
     text-align: center;
@@ -37,7 +54,7 @@ header h1 {
 
 header a {
     text-decoration: none;
-    color: turquoise;
+    color: var(--header-text-color);
 
   }
 
@@ -53,22 +70,15 @@ header nav ul {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
 }
 
 header nav ul li{
     list-style-type: none;
 }
 
-/*
-header nav ul li {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}*/
 
 header nav ul li a {
-    /*margin: 0 30px;*/
     padding: 10x 15px;
     font-weight: lighter;
     font-size: 1.55vw;
@@ -76,8 +86,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  background: black;
-  color: #024e76;
+  background: var(--header-color);
+  color: var(--header-text-color);
   border-radius: 15px;
   font-size: 2vw;
   text-shadow: none;
@@ -88,30 +98,32 @@ header nav ul li a:hover {
     width: 100%;
     height: 15%;
     background-image: url("https://eecs.oregonstate.edu/sites/eecs.oregonstate.edu/files/images/cybersecurity-1200x450.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .banner h2 {
-    color: white;
-    justify-content: last baseline;
+    color: var(--banner-text);
     text-align: right;
     margin: 0;
     padding: 9%;
     font-size: 60px;
 }
 
-
 .aboutmeblock {
     width: 100%;
     height: 7.5%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .aboutme-header {
     height: 100%;
     width: 20%;
     border-right-style: solid;
-    border-right-color: #003262 ;
+    border-right-color: var(--blue-text) ;
     border-right-width: 5px;
     text-align: right;
 }
@@ -127,7 +139,6 @@ header nav ul li a:hover {
     padding-right: 10px;
     height: 100%;
     width: 80%;
-    align-content: center;
 }
 
 .expertiseblock {
@@ -135,6 +146,7 @@ header nav ul li a:hover {
     height: 7.5%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -142,7 +154,7 @@ header nav ul li a:hover {
     height: 100%;
     width: 20%;
     border-right-style: solid;
-    border-right-color: #003262 ;
+    border-right-color: var(--blue-text) ;
     border-right-width: 5px;
     text-align: right;
     word-break: break-all;
@@ -154,11 +166,11 @@ header nav ul li a:hover {
 }
 
 .expertise-info {
-    padding-left: 10px ;
     height: 100%;
     width: 80%;
+    padding-left: 10px ;
     display: grid;
-    grid-template-columns: repeat(5, minmax(auto,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*Create a grid with a autofit property*/
     grid-gap: 5px;
     grid-auto-flow: dense;
 }   
@@ -168,23 +180,14 @@ header nav ul li a:hover {
     height: 7.5%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .initiative-header {
     height: 100%;
     width: 20%;
     border-right-style: solid;
-    border-right-color: #003262 ;
-    border-right-width: 5px;
-    text-align: right;
-    word-break: break-all;
-}
-
-.initiative-header {
-    height: 100%;
-    width: 20%;
-    border-right-style: solid;
-    border-right-color: #003262 ;
+    border-right-color: var(--blue-text);
     border-right-width: 5px;
     text-align: right;
     word-break: break-all;
@@ -209,6 +212,7 @@ header nav ul li a:hover {
     height: 55%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     border-width: 2px;
     
 }
@@ -217,7 +221,7 @@ header nav ul li a:hover {
     height: 100%;
     width: 20%;
     border-right-style: solid;
-    border-right-color: #003262 ;
+    border-right-color: var(--blue-text) ;
     border-right-width: 5px;
     text-align: right;
 }
@@ -243,24 +247,13 @@ header nav ul li a:hover {
     grid-column: 1/ span 4;
     grid-row: 1/span 3;
     border-style: 0.5px;
-    border-color: #003262 ;
+    border-color: var(--blue-text) ;
     border-style: double;
     box-align: center;
-    /*display: inline;
-    position: relative;*/
     background-image: url(../images/RunBuddy.png);
     background-size: cover;
 }
 
-/*
-#RunBuddy {
-    background-image: url(../images/RunBuddy.png);
-    background-size: cover;
-    display: block;
-    text-indent:-9999px;
-    width: 100%;
-    height: 100%;
-}*/
 
 .box1 h3{
     text-align: left;
@@ -268,12 +261,12 @@ header nav ul li a:hover {
     margin-top: 30%;
     width: 200px;
     height:50px;
-    background-color: #ececec;
+    background-color: var(--background-color);
 }
 .box1 h4{
     text-align: left;
     width: 200px;
-    background-color: #ececec;
+    background-color: var(--background-color);
 }
 
 
@@ -283,7 +276,7 @@ header nav ul li a:hover {
     grid-column: 5/ span 2;
     grid-row: 1/span 2;
     border-style: 0.5px;
-    border-color: #003262 ;
+    border-color: var(--blue-text) ;
     border-style: double;
     background-image: url("https://thumbs.dreamstime.com/t/led-video-wall-screen-texture-background-vector-blue-red-purple-color-light-diode-dot-grid-142380414.jpg");
     background-size: cover;
@@ -295,13 +288,13 @@ header nav ul li a:hover {
     margin-top: 40%;
     width: 200px;
     height:50px;
-    background-color: #ececec;
+    background-color: var(--background-color);
 }
 
 .box2 h4 {
     text-align: left;
     width: 200px;
-    background-color: #ececec;
+    background-color: var(--background-color);
 }
 
 
@@ -309,7 +302,7 @@ header nav ul li a:hover {
     grid-column: 1/ span 2;
     grid-row: 4/span 3;
     border-style: 0.5px;
-    border-color:#003262 ;
+    border-color: var(--blue-text) ;
     border-style: double;
     background-image: url("https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/65013649/original/d66427804aff912a3240edebf6cdc2a8215783ce/put-your-logo-or-website-on-10-laptop-screen-mockup.jpg");
     background-size: cover;
@@ -322,14 +315,14 @@ header nav ul li a:hover {
     margin-top: 60%;
     width: 200px;
     height:50px;
-    background-color: #ececec;
+    background-color: var(--background-color);
     align-content: center;
 }
 
 .box3 h4 {
     text-align: left;
     width: 200px;
-    background-color: #ececec;
+    background-color: var(--background-color);
 }
 
 
@@ -338,7 +331,7 @@ header nav ul li a:hover {
     grid-column: 3/ span 2;
     grid-row: 4/span 3;
     border-style: 0.5px;
-    border-color: #003262 ;
+    border-color: var(--blue-text) ;
     border-style: double;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR8NJ9fAS2CSdaZ2rSry-L0EGhETaFpRUCIQPgtueFnmEY5V2Co");
     background-size: cover;
@@ -350,14 +343,14 @@ header nav ul li a:hover {
     margin-top: 60%;
     width: 200px;
     height:50px;
-    background-color: #ececec;
+    background-color: var(--background-color);
     align-content: center;
 }
 
 .box4 h4 {
     text-align: left;
     width: 200px;
-    background-color: #ececec;
+    background-color: var(--background-color);
 }
 
 
@@ -372,9 +365,12 @@ header nav ul li a:hover {
     width: 20%;
     height: 100%;
     border-right-style: solid;
-    border-right-color: #003262 ;
+    border-right-color: var(--blue-text) ;
     border-right-width: 5px;
     text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
 }
 
 .contactme-header h2 {
@@ -391,3 +387,171 @@ header nav ul li a:hover {
     padding: 10px;
     align-content: center;
 }
+
+@media screen and (max-width:980px){
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative
+    }
+  
+    header h1 {
+      width: auto;
+      height: auto;
+      text-align: center;
+      align-content: center;
+    }
+  
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+    
+    header nav ul li a {
+      font-size: 20px;
+    }
+    
+    .banner h2 {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .aboutmeblock {
+        margin: 0;
+        display: block;
+        padding: 0;
+        height: auto;
+    }
+    .aboutme-header {
+        display: inline;
+        text-align: center;
+        border-right: none;
+    }
+
+    .aboutme-info {
+        border-style: solid;
+        border-width: 1px;
+        align-content: center;
+        justify-content: center;
+        height:auto;
+        width: auto;
+    }
+
+    .expertiseblock {
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .expertise-header {
+        display: inline;
+        text-align: center;
+        border-right: none;
+    }
+
+    .expertise-info {
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        align-content: center;
+        justify-content: center;
+        height:auto;
+        width: auto;
+    }
+
+    .initiativeblock {
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .initiative-header {
+        display: inline;
+        text-align: center;
+        border-right: none;
+    }
+
+    .initiative-info {
+        display: block;
+        border-style: solid;
+        border-width: 1px;
+        align-content: center;
+        justify-content: center;
+        height:auto;
+        width: auto;
+    }
+
+    .workblock {
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .work-header {
+        display: inline;
+        text-align: center;
+        border-right: none;
+    }
+
+    .gridcontainer {
+        width: auto;
+        height: auto;
+    }
+
+    .contactblock {
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contactme-header {
+        display: inline;
+        text-align: center;
+        border-right: none;
+    }
+
+    .contactinfo {
+        width: auto;
+        height: auto;    
+    }
+
+    .gridcontainer {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        grid-auto-flow: column;
+    }
+
+    .box1 {
+        width: auto;
+        height: auto;
+    }
+
+    .box2 {
+        width: auto;
+        height: auto;
+    }
+
+    .box3 {
+        width: auto;
+        height: auto;
+    }
+
+    .box4 {
+        width: auto;
+        height: auto;
+    }
+  }
