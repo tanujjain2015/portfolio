@@ -304,7 +304,7 @@ header nav ul li a:hover {
     border-style: 0.5px;
     border-color: var(--blue-text) ;
     border-style: double;
-    background-image: url("https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/65013649/original/d66427804aff912a3240edebf6cdc2a8215783ce/put-your-logo-or-website-on-10-laptop-screen-mockup.jpg");
+    background-image: url("../images/EventUniverse.png");
     background-size: cover;
     
 }
